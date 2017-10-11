@@ -197,22 +197,10 @@ for num,row in enumerate(rows):
 
 	uri = urlparse(row[15])[1]
 
-	# print ("	" + ' : ' + socket.gethostname() + ' : ' + getpass.getuser() + ' : ' + (MAC2) + ' : ' + str(get_IP()) + ' : ' + (row[1]) + ' : ' + (row[2])
-	#  + ' : ' + (row[3]) + ' : ' + getFiletime((row[4])) + ' : ' + str(row[5]) + ' : ' + str(row[6]) + ' : ' + State((row[7])) + ' : ' + Danger_Type(row[8])
-	#  + ' : ' + str(Interrupt_Reason((row[9]))) + ' : ' + (row[15]) + ' : ' + (row[23]) + ' : ' + str(row[24]))
 	f1.write(socket.gethostname() + ':::;' + getpass.getuser() + ':::;' + str(get_IP()) + ':::;' + (MAC2) + ':::;' + (row[1]) + ':::;' + (row[2])
 	 + ':::;' + (row[3]) + ':::;' + (getFiletime((row[4])).replace(" ", ":::;")) + ':::;' + str(row[5]) + ':::;' + str(row[6]) + ':::;' + State((row[7])) + ':::;' + Danger_Type(row[8])
 	 + ':::;' + str(Interrupt_Reason((row[9]))) + ':::;' + (row[15]) + ':::;' + (uri) + ':::;' + str(row[24]))
 	f1.write('\n')
-
-		# 'Downloads list [' + str(num + 1) + ']' + '\n' + 'GUID ' +  ': ' + (row[1]) 
-		# + '\n' + 'Current_Path: ' + (row[2]) + '\n' + 'Target_Path: ' + (row[3])
-		# + '\n' + 'Start_Download_Time: ' + getFiletime((row[4])) + '\n' + 'Recieved_Bytes: ' + str(row[5]) + ' Bytes'
-		# + '\n' + 'Total_Bytes: ' + str(row[6]) + ' Bytes' + '\n' + 'State: ' + State((row[7]))
-		# + '\n' + 'Danger_Type: ' + Danger_Type(row[8]) + '\n' + 'Interrupt_Reason: ' + str(Interrupt_Reason((row[9])))
-		# + '\n' + 'URL: ' + (row[15]) + '\n' + 'Site_lastmodified_Time: ' + (row[23])
-		# + '\n' + 'File_Type: ' + str(row[24]))
-	#print ('---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------')
 
 
 # 	Downloads_list = ('Downloads list [' + str(num + 1) + ']')
